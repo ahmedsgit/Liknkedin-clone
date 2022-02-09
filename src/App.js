@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import Feeds from './components/Feeds';
 import Widgets from './components/Widgets';
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Feeds/>
         <Widgets/>
       </div>
+      <Footer/>
     </div>
   );
 }
