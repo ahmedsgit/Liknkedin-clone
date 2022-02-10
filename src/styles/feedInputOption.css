@@ -1,4 +1,4 @@
-.inputOption{
+.inputOption {
     display: flex;
     align-items: center;
     margin-top: 15px;
@@ -7,12 +7,31 @@
     cursor: pointer;
 }
 
-.inputOption:hover{
+.inputOption:hover {
     background-color: whitesmoke;
     border-radius: 10px;
 }
 
-.inputOption h4{
+.inputOption h4 {
     margin-left: 5px;
     text-transform: capitalize;
+}
+
+/* .like:hover  +  .like-popup{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    background-color: aliceblue;
+    margin-top: -75px;
+    margin-left: -60px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: 1s ease-in-out;
+} */
+
+.like-popup{
+    display: none;
 }
