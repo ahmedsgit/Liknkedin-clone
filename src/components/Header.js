@@ -17,7 +17,7 @@ function Header() {
         <div className='header'>
             <div className='header-left'>
                 <div className='logo'>
-                    <LinkedInIcon color='primary' fontSize='large' />
+                    <LinkedInIcon style={ { color: '#ff99aa'}} fontSize='large' />
                 </div>
                 <div className='header-search'>
                     <SearchIcon />
