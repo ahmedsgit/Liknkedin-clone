@@ -1,34 +1,16 @@
-import React from 'react';
-import './App.css';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import Feeds from './components/Feeds';
-import Widgets from './components/Widgets';
-import Login from './components/Login'
-import './App.css';
-import Footer from './components/Footer';
-import { useSelector } from 'react-redux';
-import { selectUser } from './features/userSlice';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Login from './components/Login';
 
 function App() {
-  const user = useSelector(selectUser)
-
-  return (
-    <div className="app">
-      <Header/>
-      {!user ? (
-        <Login/>
-      ) : (
-        <div className='app-body'>
-        <Sidebar />
-        <Feeds/>
-        <Widgets/>
-      </div>
-      )}
-      {/* app body */}
-      <Footer />
-    </div>
-  );
+    return (
+        <div className='App'>
+            <Router>
+                <Routes>
+                    <Route exact path="/" element={ <Login /> } />
+                </Routes>
+            </Router>
+        </div>
+    )
 }
 
-export default App;
+export default App

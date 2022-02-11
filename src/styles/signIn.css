@@ -1,0 +1,95 @@
+.sign-in {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.form input {
+    margin: 8px 0;
+    width: 350px;
+    background-color: rgba(255, 102, 128, 0.03);
+    color: rgba(255, 102, 128, 0.9);
+    padding: 10px 20px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 3px;
+
+}
+
+.form input:focus {
+    outline: none !important;
+    border: 2px solid rgba(255, 102, 128, 0.9);
+}
+
+.sign-in a {
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.sign-in a:hover {
+    text-decoration: underline;
+    color: rgba(255, 102, 128, 0.9);
+}
+
+.sign-in p {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    color: gray;
+}
+
+.sign-in p:before, .sign-in p:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+}
+
+.sign-in p:before {
+    margin-right: 5px
+}
+
+.sign-in p:after {
+    margin-left: 5px
+}
+
+.sign-in .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+.button button {
+    cursor: pointer;
+    margin: 10px 0;
+    width: 380px;
+    padding: 13px 10px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 24px;
+}
+
+.button button:active {
+    transform: scale(0.98);
+    transition: .3s all;
+}
+
+.button button:first-child {
+    background-color: rgba(255, 102, 128, 0.9);
+    color: #fff;
+}
+
+.button button:last-child {
+    background-color: #fff;
+    color: rgba(255, 102, 128, 0.9);
+    border: 1px solid rgba(255, 102, 128, 0.9);
+}
