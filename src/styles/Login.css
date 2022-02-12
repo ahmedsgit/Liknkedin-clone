@@ -108,8 +108,16 @@
     margin-left: 15px;
 }
 
+/* topic */
+.recent {
+    margin-top: -200px;
+    background-color: rgba(255, 102, 128, 0.03);
+    min-height: 200px;
+}
+
 
 @media (max-width: 768px) {
+
     /* navigation */
     .nav a {
         padding: 0 15px;

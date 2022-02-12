@@ -89,7 +89,20 @@
 }
 
 .button button:last-child {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     color: rgba(255, 102, 128, 0.9);
     border: 1px solid rgba(255, 102, 128, 0.9);
+}
+
+.button .googleIcon {
+    position: absolute;
+    left: 0;
+    padding-left: 40px;
+    object-fit: contain;
+    height: 30px;
+    margin-left: 15px;
 }

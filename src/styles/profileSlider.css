@@ -1,0 +1,80 @@
+.profileSlider {
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.arrow-button {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-button .leftArrow, .arrow-button .rightArrow {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.arrow-button .leftArrow:hover, .arrow-button .rightArrow:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.arrow-button .leftArrow:active, .arrow-button .rightArrow:active {
+    transform: scale(0.95);
+}
+
+
+.doc-section {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.doc-section h3 {
+    font-size: 40px;
+    font-weight: 400;
+    color: rgba(77, 77, 255, 0.8);
+    margin: 10px 0;
+}
+
+.doc-section p {
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 10px 0;
+}
+
+.slider img {
+    object-fit: contain;
+    height: 300px;
+    padding: 30px;
+}
+
+.slider {
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+.slider.active {
+    opacity: 1;
+    transition-duration: 1s ease;
+}
+
+.slider .image {
+    margin-top: 30px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider-container {
+    margin-top: 200px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,100 @@
+.topic {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.topic h3 {
+    width: 20%;
+    font-family: 'Barlow', sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 1);
+}
+
+.button-section {
+    width: 35%;
+    margin-right: 60px;
+}
+
+.button-section h6 {
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-size: 14px;
+    color: gray;
+    letter-spacing: 1px;
+}
+
+.button-section a {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: gray;
+    padding: 5px 7px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.button-section a:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+    color: rgba(0, 0, 0, 1);
+    font-weight: 500;
+}
+
+.button-section a:active {
+    transform: scale(.98);
+}
+
+.button-container button {
+    padding: 13px 18px;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 5px;
+    outline: none;
+    background-color: rgba(255, 102, 128, 0.07);
+    color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
+    border-radius: 24px;
+}
+
+.button-container button:first-child {
+    border: 2px solid rgba(255, 102, 128, 0.5);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .topic {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topic h3 {
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .button-section {
+        width: 70%;
+    }
+
+    .button-section h6 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: fit-content;
+    }
+}
