@@ -3,8 +3,8 @@ import AddBoxIcon from '@material-ui/icons/AddBox';
 import AddSharpIcon from '@material-ui/icons/AddSharp'
 import BookmarkIcon from '@material-ui/icons/Bookmark';
 import React from 'react';
-import user from '../images/ahmed.jpg';
-import coverPic from '../images/cover.jpg';
+import user from '../images/user/ahmed.jpg';
+import coverPic from '../images/user/cover.jpg';
 import '../styles/sidebar.css';
 
 function Sidebar() {

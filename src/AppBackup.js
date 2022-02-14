@@ -1,16 +1,13 @@
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import Feeds from './components/Feeds';
-import Widgets from './components/Widgets';
-import Login from './components/LoginBackup'
-import './App.css';
-import Footer from './components/Footer';
-import { useSelector } from 'react-redux';
-import { login, selectUser } from './features/userSlice';
-import { useDispatch } from 'react-redux';
 import { auth } from './backend/firebase';
+import Feeds from './components/Feeds';
+import Header from './components/Header';
+import Login from './components/Login';
+import Sidebar from './components/Sidebar';
+import Widgets from './components/Widgets';
+import { login, selectUser } from './features/userSlice';
 
 function App() {
   const user = useSelector(selectUser)
@@ -33,18 +30,16 @@ function App() {
   
   return (
     <div className="app">
-      <Header/>
+      <Header />
       {!user ? (
         <Login/>
       ) : (
         <div className='app-body'>
-        <Sidebar />
-        <Feeds/>
-        <Widgets/>
+            <Sidebar />
+            <Feeds/>
+            <Widgets/>
       </div>
       )}
-      {/* app body */}
-      <Footer />
     </div>
   );
 }

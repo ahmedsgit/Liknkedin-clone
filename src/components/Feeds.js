@@ -7,7 +7,7 @@ import ImageIcon from '@material-ui/icons/Image';
 import SubscriptionIcon from '@material-ui/icons/Subscriptions';
 import { useEffect, useState } from 'react';
 import { db } from '../backend/firebase';
-import user from '../images/ahmed.jpg';
+import user from '../images/user/ahmed.jpg';
 import '../styles/feeds.css';
 import FeedInputOption from './FeedInputOption';
 import Post from './Post';

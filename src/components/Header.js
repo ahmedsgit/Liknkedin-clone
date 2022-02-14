@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/header.css';
-import user from '../images/ahmed.jpg';
+import user from '../images/user/ahmed.jpg';
 import SearchIcon from '@material-ui/icons/Search';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import HomeIcon from '@material-ui/icons/Home';
