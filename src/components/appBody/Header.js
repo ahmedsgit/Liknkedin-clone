@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import PlusIcon from '@material-ui/icons/AddBoxRounded';
 import SearchIcon from '@material-ui/icons/Search';
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import DownIcon from '../../images/down-icon.svg';
 import HomeIcon from '../../images/nav-home.svg';
@@ -13,6 +14,9 @@ import WorkIcon from '../../images/nav-work.svg';
 import UserIcon from '../../images/user.svg';
 
 function Header() {
+
+    const [popup, setPopup] = useState(false);
+    console.log(popup);
     return (
         <Container>
             {/* <ProfilePopupMobile>
@@ -82,15 +86,15 @@ function Header() {
                                 <span>notification</span>
                             </a>
                         </NavList>
-                        <User>
-                            <a href="/profile">
+                        <User onClick={ () => setPopup(!popup) }>
+                            <a>
                                 <img src={ UserIcon } alt="user icon"/>
                                 <span>
                                     <span>me</span>
                                     <img src={ DownIcon } alt="down icon" />
                                 </span>
                             </a>
-                            <UserPopup>
+                            <UserPopup className={ `${popup ? "active" : ""}`}>
                                 <Profile>
                                     <div>
                                         <img src={ UserIcon } alt="User icon" />
@@ -102,15 +106,15 @@ function Header() {
                                     <button>View Profile</button>
                                 </Profile>
                                 <Menu>
-                                    <a href="/account">account</a>
-                                    <a href="/settings">settings &amp; privacy</a>
-                                    <a href="/help">help</a>
-                                    <a href="/language">language</a>
+                                    <a className='link' href="/account">account</a>
+                                    <a className='link' href="/settings">settings &amp; privacy</a>
+                                    <a className='link' href="/help">help</a>
+                                    <a className='link' href="/language">language</a>
                                 </Menu>
                                 <Menu>
-                                    <a href="/account">manage</a>
-                                    <a href="/settings">posts &amp; activity</a>
-                                    <a href="/help">job posting account</a>
+                                    <a className='link' href="/account">manage</a>
+                                    <a className='link' href="/settings">posts &amp; activity</a>
+                                    <a className='link' href="/help">job posting account</a>
                                 </Menu>
                                 <SignOut>
                                     <a href="/login">Sign out</a>
@@ -165,7 +169,7 @@ const Content = styled.div`
 
 // User Popup Window
 const UserPopup = styled.div`
-    display:none;
+    display: none;
     position: absolute;
     top: 45px;
     background-color: #fff;
@@ -176,6 +180,7 @@ const UserPopup = styled.div`
     margin-left: -210px;
     margin-top: 10px;
     border-radius: 7px 0px 7px 7px;
+    
     > * {
         &:nth-child(2) {
             margin-top: 10px;
@@ -188,6 +193,10 @@ const UserPopup = styled.div`
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
         
+    }
+
+    &.active{
+        display:block;
     }
 `;
 
@@ -237,8 +246,6 @@ const Profile = styled.div`
 const Menu = styled.div`
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
     text-transform: capitalize;
     > *{
         &:first-child {
@@ -247,14 +254,14 @@ const Menu = styled.div`
         }
     }
 
-    & > a {
-        cursor: pointer;
+    .link {
         margin: -3px 0;
         padding-left: 5px;
-        display: flex;
-        align-items: flex-start;
+        display:flex;
+        flex-direction: column;
+        align-items:flex-start;
         font-size: 15px;
-        text-decoration:none;
+        text-decoration: none;
         color: rgba(0, 0, 0, 0.7);
 
         &:hover{
@@ -469,6 +476,7 @@ const NavList = styled.li`
 
 
 const User = styled(NavList)`
+    cursor: pointer;
     a > img {
         width: 24px;
         height:24px;
@@ -480,11 +488,11 @@ const User = styled(NavList)`
         align-items: center;
     }
 
-    &:hover {
+    /* &:hover {
         ${UserPopup} {
             display: block;
         }
-    }
+    } */
     @media (max-width: 768px) {
         display: none;
     }
