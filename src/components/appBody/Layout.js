@@ -26,6 +26,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         padding: 0 5px;
+        margin: 5px 20px;
     }
 `;
 
