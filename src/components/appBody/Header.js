@@ -41,31 +41,31 @@ function Header() {
                 </NavList>
                 <Nav>
                     <NavListWrap>
-                        <NavList className='active navOption'>
+                        <NavList className='active'>
                             <a href="/">
                                 <img src={ HomeIcon } alt="homeicon" />
                                 <span>Home</span>
                             </a>
                         </NavList>
-                        <NavList className='navOption'>
+                        <NavList>
                             <a href="/">
                                 <img src={ NetworkIcon } alt="homeicon" />
                                 <span>My Network</span>
                             </a>
                         </NavList>
-                        <NavList className="post navOption">
+                        <NavList className="post ">
                             <a href="/">
                                 <PlusIcon className="plus-icon"/>
                                 <span>post</span>
                             </a>
                         </NavList>
-                        <NavList className="navOption">
+                        <NavList >
                             <a href="/">
                                 <img src={ JobsIcon } alt="homeicon" />
                                 <span>Jobs</span>
                             </a>
                         </NavList>
-                        <NavList className="message navOption">
+                        <NavList className="message">
                             <a href="/">
                                 <img src={ MessagingIcon } alt="homeicon" />
                                 <span>messeging</span>
@@ -412,21 +412,6 @@ const NavListWrap = styled.ul`
 const NavList = styled.li`
     display: flex;
     align-items: center;
-
-    &.navOption:hover{
-        span:after {
-            content: '';
-            transform: scaleX(1);
-            border-bottom: 2px solid var(--white, #fff);
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            width:100%;
-            transition: transform 0.2s ease-in-out;
-            border-color: rgba(0, 0, 0, 0.9);
-        }
-    }
-    
     a {
         background: transparent;
         display:flex;
