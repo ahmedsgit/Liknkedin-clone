@@ -19,15 +19,6 @@ function Header() {
     console.log(popup);
     return (
         <Container>
-            {/* <ProfilePopupMobile>
-                <img src={ UserIcon } alt="user icon" />
-                <div>
-                    <Name>Ahmed Sazzad</Name>
-                    <button>view profile</button>
-                    <button>settings</button>
-                </div>
-                <CloseIcon className='icon-close' />
-            </ProfilePopupMobile> */}
             <Content>
                 <Logo>
                     <a className='linkedin' href="/">
@@ -94,7 +85,7 @@ function Header() {
                                     <img src={ DownIcon } alt="down icon" />
                                 </span>
                             </a>
-                            <UserPopup className={ `${popup ? "active" : ""}`}>
+                            <UserPopup className={ `${popup ? "profile-popup-active" : ""}`}>
                                 <Profile>
                                     <div>
                                         <img src={ UserIcon } alt="User icon" />
@@ -117,7 +108,7 @@ function Header() {
                                     <a className='link' href="/help">job posting account</a>
                                 </Menu>
                                 <SignOut>
-                                    <a href="/login">Sign out</a>
+                                    <a className="signOut" href="/">Sign out</a>
                                 </SignOut>
                             </UserPopup>
                         </User>
@@ -180,7 +171,6 @@ const UserPopup = styled.div`
     margin-left: -210px;
     margin-top: 10px;
     border-radius: 7px 0px 7px 7px;
-    
     > * {
         &:nth-child(2) {
             margin-top: 10px;
@@ -195,7 +185,7 @@ const UserPopup = styled.div`
         
     }
 
-    &.active{
+    &.profile-popup-active{
         display:block;
     }
 `;
@@ -272,48 +262,26 @@ const Menu = styled.div`
 const SignOut = styled.div`
         margin-top: 5px;
         border-radius: 7px;
-        a {
+        .signOut {
             margin: -3px 0;
             padding-left: 5px;
             display: flex;
-            align-items: center;
-            font-size: 17px;
-            text-decoration:none;
-            color: rgba(0, 0, 0, 0.7);
+            align-items: flex-start;
+            font-size: 14px;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.6);
             font-weight: 600;
 
-        &:hover{
-            background: rgba(255, 128, 149, 0.1);
-        }
-        &:active{
-            transform: scale(0.97);
-            border: 1px solid #ff8095;
-        }
+            &:hover{
+                background: rgba(255, 128, 149, 0.1);
+            }
+            &:active{
+                transform: scale(0.97);
+                border: 1px solid #ff8095;
+            }
         }
 
 `;
-// End user popup
-
-// user popup for mobile
-// const ProfilePopupMobile = styled.div`
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 60%;
-//     height: 100%;
-//     background-color: red;
-
-//     & > img {
-//         margin-right: 5px;
-//         height: 50px;
-//         border-radius: 50%;
-//     }
-// `;
-
-// const Name = styled.div`
-
-// `;
-
 
 const Logo = styled.span`
     margin-right: 8px;

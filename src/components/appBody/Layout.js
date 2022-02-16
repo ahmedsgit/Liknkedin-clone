@@ -20,7 +20,7 @@ const Container = styled.div`
     column-gap: 25px;
     row-gap: 25px;
     grid-template-rows: auto;
-    margin:25px 0;
+    margin:25px 10px;
 
     @media (max-width: 768px) {
         display: flex;
