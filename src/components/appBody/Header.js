@@ -41,37 +41,37 @@ function Header() {
                 </NavList>
                 <Nav>
                     <NavListWrap>
-                        <NavList className='active'>
+                        <NavList className='active navOption'>
                             <a href="/">
                                 <img src={ HomeIcon } alt="homeicon" />
                                 <span>Home</span>
                             </a>
                         </NavList>
-                        <NavList>
+                        <NavList className='navOption'>
                             <a href="/">
                                 <img src={ NetworkIcon } alt="homeicon" />
                                 <span>My Network</span>
                             </a>
                         </NavList>
-                        <NavList className="post">
+                        <NavList className="post navOption">
                             <a href="/">
                                 <PlusIcon className="plus-icon"/>
                                 <span>post</span>
                             </a>
                         </NavList>
-                        <NavList>
+                        <NavList className="navOption">
                             <a href="/">
                                 <img src={ JobsIcon } alt="homeicon" />
                                 <span>Jobs</span>
                             </a>
                         </NavList>
-                        <NavList className="message">
+                        <NavList className="message navOption">
                             <a href="/">
                                 <img src={ MessagingIcon } alt="homeicon" />
                                 <span>messeging</span>
                             </a>
-                        </NavList>
-                        <NavList>
+                        </NavList >
+                        <NavList className="navOption">
                             <a href="/">
                                 <img src={ NotificationsIcon } alt="homeicon" />
                                 <span>notification</span>
@@ -121,6 +121,9 @@ function Header() {
                                 </span>
                             </a>
                         </Work>
+                        <Premium>
+                            <a>Get Hired Faster, Try Premium Free</a>
+                        </Premium>
                     </NavListWrap>
                 </Nav>
             </Content>
@@ -409,6 +412,21 @@ const NavListWrap = styled.ul`
 const NavList = styled.li`
     display: flex;
     align-items: center;
+
+    &.navOption:hover{
+        span:after {
+            content: '';
+            transform: scaleX(1);
+            border-bottom: 2px solid var(--white, #fff);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            width:100%;
+            transition: transform 0.2s ease-in-out;
+            border-color: rgba(0, 0, 0, 0.9);
+        }
+    }
+    
     a {
         background: transparent;
         display:flex;
@@ -470,5 +488,25 @@ const Work = styled(User)`
     border-left: 1px solid rgba(0, 0, 0, 0.08);
 `;
 
+const Premium = styled.li`
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .5px;
+    max-width: 110px;
+    font-size: 12px;
+
+    &:hover{
+        text-decoration: underline;
+    }
+    &:active{
+        transform: scale(0.97);
+    }
+
+    @media (max-width: 1200px){
+        display: none;
+    }
+`;
 
 export default Header;

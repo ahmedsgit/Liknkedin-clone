@@ -19,7 +19,7 @@ const Container = styled.div`
   box-sizing: content-box;
   text-align: center;
   text-decoration: none;
-  display: flex;
+  display: none;
   justify-content: center;
 
   h5 {
@@ -38,6 +38,7 @@ const Container = styled.div`
     font-weight: 600;
   }
   @media (max-width: 768px){
+    display: flex;
     flex-direction: column;
       h5 {
         font-size: 17px;
