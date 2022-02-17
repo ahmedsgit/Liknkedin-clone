@@ -179,12 +179,12 @@ const Premium = styled.div`
         padding-bottom: 12px;
 
         img{
-            margin-right: 5px;
+            margin: auto 5px;
         }
 
         h6 {
             color: rgba( 0, 0, 0, 0.8 );
-            font-size: 13px;
+            font-size: 11px;
             text-transform: capitalize;
         }
     }
